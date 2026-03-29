@@ -4,12 +4,16 @@ require_once __DIR__ . '/../config/config.php';
 $base_url = SITE_URL . '/';
 include '../includes/header.php';
 ?>
-
-<div class="bg-bipraj pt-24 pb-32">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6">Bipraj</h1>
-        <p class="text-xl md:text-2xl text-slate-800 mb-10 font-medium max-w-2xl mx-auto">Premium Drinking Water tailored for your everyday hydration needs.</p>
-        <a href="<?php echo $base_url; ?>products.php" class="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-slate-50 hover:scale-105 transition shadow-lg">
+<!-- Hero Banner Section -->
+<div class="relative pt-24 pb-32 overflow-hidden bg-slate-900">
+    <!-- Banner Image Background -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60" style="background-image: url('<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
+    
+    <div class="relative max-w-4xl mx-auto px-4 text-center z-10 mt-12">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 drop-shadow-lg">Bipraj</h1>
+        <p class="text-xl md:text-2xl text-slate-100 mb-10 font-medium max-w-2xl mx-auto drop-shadow-md">Premium Drinking Water tailored for your everyday hydration needs.</p>
+        <a href="<?php echo $base_url; ?>products.php" class="inline-flex items-center gap-2 bg-bipraj text-slate-900 px-8 py-4 rounded-full font-black hover:bg-white hover:scale-105 transition shadow-2xl">
             Shop Bipraj Range <i class="fa-solid fa-arrow-right"></i>
         </a>
     </div>
