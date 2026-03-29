@@ -9,32 +9,47 @@ $products = $stmt->fetchAll();
 ?>
 
 <!-- Hero Slider Section -->
-<section class="h-[55vh] md:h-[80vh] min-h-[380px] md:min-h-[500px] w-full relative group bg-indigo-50">
+<section class="w-full md:h-[80vh] md:min-h-[500px] relative group">
     <div class="swiper heroSwiper h-full w-full">
         <div class="swiper-wrapper">
             <!-- Slide 1: Bipraj -->
-            <div class="swiper-slide bg-[#eef8ff] relative flex flex-col md:flex-row items-center justify-start overflow-hidden">
-                
-                <!-- Desktop Banner Image (Uses Cover to fill the wide screen) -->
-                <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png" 
-                     class="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0" 
+            <!-- MOBILE: natural image height, text overlaid on top; DESKTOP: fixed 80vh cover -->
+            <div class="swiper-slide bg-[#eef8ff] relative md:flex md:items-center md:justify-start md:overflow-hidden">
+
+                <!-- ===== MOBILE LAYOUT ===== -->
+                <!-- Image at full natural width (no cropping, no zooming) -->
+                <div class="relative md:hidden">
+                    <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png"
+                         onerror="this.onerror=null;"
+                         class="w-full h-auto block"
+                         alt="Bipraj Banner">
+                    <!-- Gradient overlay for text readability on mobile -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent"></div>
+                    <!-- Text floated on top-left of image -->
+                    <div class="absolute inset-0 flex items-center px-5 pt-2">
+                        <div>
+                            <h1 class="text-3xl font-extrabold text-[#111827] leading-tight mb-2 drop-shadow-sm">Natural &amp; Pure<br/>Drinking Water</h1>
+                            <p class="text-sm font-bold text-slate-700 mb-4 max-w-[180px]">Premium hydration for your everyday life.</p>
+                            <div class="flex flex-col gap-2">
+                                <a href="<?php echo $base_url; ?>about.php" class="inline-flex items-center justify-center bg-[#2563ea] text-white px-6 py-2.5 rounded-full font-black text-xs tracking-wide shadow-lg hover:bg-[#1d4ed8] transition">
+                                    MORE ABOUT US
+                                </a>
+                                <a href="<?php echo $base_url; ?>contact.php" class="inline-flex items-center justify-center bg-white border border-slate-300 text-slate-800 px-6 py-2.5 rounded-full font-black text-xs tracking-wide shadow hover:bg-slate-50 transition">
+                                    CONTACT US
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== DESKTOP LAYOUT ===== -->
+                <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png"
+                     class="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0"
                      alt="Bipraj Promo Desktop">
-                     
-                <!-- Mobile Banner Image (Uses Contain strictly so the FULL image is always visible without ANY cropping/zooming) -->
-                <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner-mobile.png" 
-                     onerror="this.onerror=null; this.src='<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png';"
-                     class="block md:hidden absolute inset-0 w-full h-full object-contain md:object-cover object-center z-0" 
-                     alt="Bipraj Promo Mobile">
-                
-                <!-- White Gradient Overlay (Protects text layout, tailored for mobile) -->
-                <div class="absolute inset-0 bg-gradient-to-r from-[#eef8ff]/95 via-[#eef8ff]/80 to-transparent z-0 md:hidden"></div>
                 <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent z-0"></div>
-                
-                <!-- Slide Text Content -->
-                <div class="text-left px-6 sm:px-12 md:px-16 max-w-7xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full pb-4 md:pb-0">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#111827] tracking-tight mb-4 drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] leading-[1.1]">Natural & Pure <br/>Drinking Water</h1>
-                    <p class="text-lg sm:text-xl md:text-2xl text-slate-700 mb-8 font-bold drop-shadow-sm max-w-sm sm:max-w-md">Premium hydration tailored for your everyday life.</p>
-                    
+                <div class="hidden md:block text-left px-12 lg:px-16 max-w-7xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-[#111827] tracking-tight mb-4 drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] leading-[1.1]">Natural &amp; Pure <br/>Drinking Water</h1>
+                    <p class="text-xl md:text-2xl text-slate-700 mb-8 font-bold drop-shadow-sm max-w-md">Premium hydration tailored for your everyday life.</p>
                     <div class="flex flex-wrap items-center gap-4">
                         <a href="<?php echo $base_url; ?>about.php" class="inline-flex items-center justify-center bg-[#2563ea] text-white px-8 py-3.5 rounded-full font-black hover:bg-[#1d4ed8] hover:scale-105 transition shadow-lg text-sm tracking-wide">
                             MORE ABOUT US
@@ -260,6 +275,7 @@ $products = $stmt->fetchAll();
                 loop: true,
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
+                autoHeight: true,
                 autoplay: { delay: 5000, disableOnInteraction: false },
                 pagination: { el: '.swiper-pagination', clickable: true },
                 navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
