@@ -9,15 +9,28 @@ $products = $stmt->fetchAll();
 ?>
 
 <!-- Hero Slider Section -->
-<section class="h-[65vh] md:h-[80vh] min-h-[400px] md:min-h-[500px] w-full relative group">
+<section class="h-[70vh] md:h-[80vh] min-h-[450px] md:min-h-[500px] w-full relative group">
     <div class="swiper heroSwiper h-full w-full">
         <div class="swiper-wrapper">
             <!-- Slide 1: Bipraj -->
-            <div class="swiper-slide bg-slate-900 bg-cover bg-center bg-no-repeat relative flex items-center justify-center overflow-hidden" style="background-image: url('<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png');">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/10 z-0"></div>
-                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-4 md:mb-6 drop-shadow-lg leading-tight">Bipraj Drinking Water</h1>
-                    <p class="text-lg sm:text-xl md:text-2xl text-slate-100 mb-8 md:mb-10 font-medium drop-shadow-md px-2">Pure Hydration for Everyday Life</p>
+            <div class="swiper-slide bg-slate-900 relative flex items-center justify-center overflow-hidden">
+                <!-- Desktop Banner Image -->
+                <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png" 
+                     class="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0" 
+                     alt="Bipraj Promo Desktop">
+                     
+                <!-- Mobile Banner Image (With script fallback to Desktop image if missing) -->
+                <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner-mobile.png" 
+                     onerror="this.onerror=null; this.src='<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png';"
+                     class="block md:hidden absolute inset-0 w-full h-full object-cover object-center z-0" 
+                     alt="Bipraj Promo Mobile">
+                
+                <!-- Advanced gradient to ensure text readability on mobile and desktop -->
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/60 md:via-slate-900/30 to-transparent z-0"></div>
+                
+                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full mt-12 md:mt-0">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-4 md:mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] leading-tight">Bipraj Drinking Water</h1>
+                    <p class="text-base sm:text-lg md:text-2xl text-slate-100 mb-8 md:mb-10 font-bold drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] px-2">Pure Hydration for Everyday Life</p>
                     <a href="<?php echo $base_url; ?>brands/bipraj.php" class="inline-flex items-center gap-2 bg-bipraj text-slate-900 px-6 py-3 md:px-8 md:py-4 rounded-full font-black hover:bg-white hover:scale-105 transition shadow-2xl text-sm md:text-base">
                         Explore Bipraj <i class="fa-solid fa-arrow-right"></i>
                     </a>
