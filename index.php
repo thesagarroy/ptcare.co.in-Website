@@ -19,27 +19,9 @@ $products = $stmt->fetchAll();
                     <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png"
                          class="absolute inset-0 w-full h-full object-cover object-center"
                          alt="Bipraj Banner">
-                    <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
-                    <div class="absolute inset-0 flex items-center px-[5%]">
-                        <div class="max-w-[52%]">
-                            <h1 style="font-size:clamp(0.9rem,3.2vw,4rem);" class="font-extrabold text-[#111827] leading-tight mb-[1.5%]">Natural &amp; Pure<br>Drinking Water</h1>
-                            <p style="font-size:clamp(0.55rem,1.4vw,1.25rem);" class="font-semibold text-slate-700 mb-[2%] leading-snug">Premium hydration for your everyday life.</p>
-                            <div class="flex flex-wrap gap-[1%]">
-                                <a href="<?php echo $base_url; ?>about.php"
-                                   class="inline-flex items-center bg-[#2563ea] text-white rounded-full font-black hover:bg-[#1d4ed8] transition shadow-md whitespace-nowrap"
-                                   style="font-size:clamp(0.5rem,1.1vw,0.85rem); padding:clamp(3px,0.7vw,12px) clamp(8px,1.8vw,28px);">
-                                    MORE ABOUT US
-                                </a>
-                                <a href="<?php echo $base_url; ?>contact.php"
-                                   class="inline-flex items-center bg-white border border-slate-300 text-slate-800 rounded-full font-black hover:bg-slate-50 transition shadow whitespace-nowrap"
-                                   style="font-size:clamp(0.5rem,1.1vw,0.85rem); padding:clamp(3px,0.7vw,12px) clamp(8px,1.8vw,28px);">
-                                    CONTACT US
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
+
 
             <!-- Slide 2: Bislaim -->
             <div class="swiper-slide">
