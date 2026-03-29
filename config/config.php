@@ -18,7 +18,7 @@ if ($domain === 'localhost' || $domain === '127.0.0.1') {
     define('DB_HOST', 'localhost'); // Server hostname is usually localhost when running on Hostinger
     define('DB_USER', 'u476804574_thesagarroy'); 
     define('DB_PASS', '#ParichitiStudios@SGurd23Hostinger'); 
-    define('DB_NAME', 'u476804574_v31QN');
+    define('DB_NAME', 'u476804574_PTCarePHP');
     
     define('SITE_URL', $protocol . '://' . $domain);
 }
