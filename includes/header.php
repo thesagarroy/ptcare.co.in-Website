@@ -40,12 +40,12 @@ $base_url = SITE_URL . '/';
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
-<body class="bg-white font-sans text-slate-800 antialiased pt-32 sm:pt-28">
+<body class="bg-white font-sans text-slate-800 antialiased pt-16 sm:pt-20 md:pt-28 lg:pt-[116px]">
 
     <!-- Header Wrapper (Groups both bars to prevent mobile overlap) -->
     <div class="fixed top-0 w-full z-50 flex flex-col">
-        <!-- 1. Top Announcement Bar -->
-        <div class="bg-slate-100 border-b border-slate-200 text-slate-600 text-[11px] sm:text-xs py-1.5 sm:py-2 w-full">
+        <!-- 1. Top Announcement Bar (Hidden on Mobile) -->
+        <div class="hidden md:block bg-slate-100 border-b border-slate-200 text-slate-600 text-[11px] sm:text-xs py-1.5 sm:py-2 w-full">
             <div class="w-full px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-2">
                 <div class="flex items-center gap-3 sm:gap-4 font-medium">
                     <span class="flex items-center gap-1.5 hover:text-ptred transition"><i class="fa-solid fa-truck-fast"></i> Delivery across West Bengal</span>
@@ -68,13 +68,15 @@ $base_url = SITE_URL . '/';
                 <div class="flex justify-between items-center h-16 sm:h-20">
                 
                 <!-- Logo Zone -->
-                <div class="flex-shrink-0 flex items-center pr-8">
+                <div class="flex-shrink-0 flex items-center pr-4 md:pr-8">
                     <a href="<?php echo $base_url; ?>index.php" class="flex items-center gap-3 group">
-                        <!-- YOU CAN UPLOAD YOUR LOGO HERE: assets/images/logo/logo.png -->
-                        <!-- If logo exists, it will show this, otherwise fallback to the icon -->
-                        <div class="relative w-12 h-12 flex items-center justify-center bg-gradient-to-br from-bislaim to-blue-500 rounded-xl text-white shadow-md group-hover:shadow-lg transition">
-                            <i class="fa-solid fa-droplet text-2xl"></i>
-                        </div>
+                        
+                        <!-- Real Image Logo (Replace logo.png/jpg in assets/images/logo) -->
+                        <img src="<?php echo $base_url; ?>assets/images/logo/logo.png" 
+                             alt="P.T. Healthcare Logo" 
+                             class="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm"
+                             onerror="this.outerHTML='<div class=\'relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-gradient-to-br from-bislaim to-blue-500 rounded-xl text-white shadow-md group-hover:shadow-lg transition\'><i class=\'fa-solid fa-droplet text-xl md:text-2xl\'></i></div>'">
+                        
                         <div class="hidden sm:block">
                             <span class="block text-xl font-heading font-black text-slate-900 tracking-tight leading-none group-hover:text-bislaim transition">P.T. HEALTHCARE</span>
                             <span class="block text-[0.65rem] font-bold text-slate-400 tracking-widest uppercase mt-1">Pvt. Ltd.</span>
@@ -142,8 +144,8 @@ $base_url = SITE_URL . '/';
     </div> <!-- End Header Wrapper -->
 
     <!-- Mobile Navigation Menu (Hidden by default) -->
-    <div class="md:hidden hidden bg-white border-t border-slate-100 fixed top-[88px] w-full shadow-2xl z-40" id="mobileMenu">
-        <div class="px-4 py-6 space-y-2 max-h-[70vh] overflow-y-auto">
+    <div class="md:hidden hidden bg-white border-t border-slate-100 fixed top-16 sm:top-20 w-full shadow-2xl z-40" id="mobileMenu">
+        <div class="px-4 py-6 space-y-2 max-h-[80vh] overflow-y-auto">
             <a href="<?php echo $base_url; ?>index.php" class="block px-4 py-3 text-base font-bold text-slate-800 bg-slate-50 rounded-xl">Home</a>
             <a href="<?php echo $base_url; ?>about.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">About Us</a>
             <a href="<?php echo $base_url; ?>products.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">Products</a>
