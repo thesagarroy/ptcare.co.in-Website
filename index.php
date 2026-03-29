@@ -9,21 +9,28 @@ $products = $stmt->fetchAll();
 ?>
 
 <!-- Hero Slider Section -->
-<section class="h-[70vh] md:h-[80vh] min-h-[500px] w-full relative group">
+<section class="h-[70vh] md:h-[80vh] min-h-[500px] w-full relative group bg-indigo-50">
     <div class="swiper heroSwiper h-full w-full">
         <div class="swiper-wrapper">
             <!-- Slide 1: Bipraj -->
-            <div class="swiper-slide bg-slate-100 relative flex items-center justify-start overflow-hidden">
-                <!-- Banner Image (Full cover, pinned to 80% right to show bottles strictly on mobile) -->
+            <div class="swiper-slide bg-[#eef8ff] relative flex flex-col md:flex-row items-center justify-start overflow-hidden">
+                
+                <!-- Desktop Banner Image (Uses Cover to fill the wide screen) -->
                 <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png" 
-                     class="absolute inset-0 w-full h-full object-cover object-[80%_center] md:object-center z-0" 
-                     alt="Bipraj Promo">
+                     class="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0" 
+                     alt="Bipraj Promo Desktop">
+                     
+                <!-- Mobile Banner Image (Uses Contain strictly so the FULL image is always visible without ANY cropping/zooming) -->
+                <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner-mobile.png" 
+                     onerror="this.onerror=null; this.src='<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png';"
+                     class="block md:hidden absolute inset-0 w-full h-full object-contain md:object-cover object-center z-0" 
+                     alt="Bipraj Promo Mobile">
                 
-                <!-- White Gradient Overlay (Ensures text readability on both devices) -->
-                <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent z-0 sm:hidden"></div>
-                <div class="hidden sm:block absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent z-0"></div>
+                <!-- White Gradient Overlay (Protects text layout, tailored for mobile) -->
+                <div class="absolute inset-0 bg-gradient-to-r from-[#eef8ff]/95 via-[#eef8ff]/80 to-transparent z-0 md:hidden"></div>
+                <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent z-0"></div>
                 
-                <!-- Slide Text Content - STRICTLY LEFT ALIGNED ON ALL DEVICES -->
+                <!-- Slide Text Content -->
                 <div class="text-left px-6 sm:px-12 md:px-16 max-w-7xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#111827] tracking-tight mb-4 drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] leading-[1.1]">Natural & Pure <br/>Drinking Water</h1>
                     <p class="text-lg sm:text-xl md:text-2xl text-slate-700 mb-8 font-bold drop-shadow-sm max-w-sm sm:max-w-md">Premium hydration tailored for your everyday life.</p>
