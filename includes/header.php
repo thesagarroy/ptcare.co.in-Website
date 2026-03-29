@@ -40,30 +40,32 @@ $base_url = SITE_URL . '/';
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
-<body class="bg-white font-sans text-slate-800 antialiased pt-[124px]"> <!-- Padding to offset fixed headers -->
+<body class="bg-white font-sans text-slate-800 antialiased pt-32 sm:pt-28">
 
-    <!-- 1. Top Announcement Bar -->
-    <div class="bg-slate-100 border-b border-slate-200 text-slate-600 text-xs py-2 fixed top-0 w-full z-50">
-        <div class="w-full px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-4 font-medium">
-                <span class="flex items-center gap-1.5 hover:text-ptred transition"><i class="fa-solid fa-truck-fast"></i> Delivery across West Bengal</span>
-                <span class="hidden md:inline text-slate-300">|</span>
-                <span class="hidden md:flex items-center gap-1.5 hover:text-ptdark transition"><i class="fa-solid fa-leaf text-green-500"></i> ISO 9001:2015 Certified</span>
-            </div>
-            <div class="flex items-center gap-4 font-bold">
-                <a href="<?php echo $base_url; ?>contact.php" class="hover:text-ptred transition"><i class="fa-solid fa-location-dot"></i> Find Distributors</a>
-                <span class="hidden md:inline text-slate-300">|</span>
-                <a href="tel:+919876543210" class="flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm text-slate-800 hover:text-ptred transition">
-                    <i class="fa-solid fa-phone"></i> +91 98765 43210
-                </a>
+    <!-- Header Wrapper (Groups both bars to prevent mobile overlap) -->
+    <div class="fixed top-0 w-full z-50 flex flex-col">
+        <!-- 1. Top Announcement Bar -->
+        <div class="bg-slate-100 border-b border-slate-200 text-slate-600 text-[11px] sm:text-xs py-1.5 sm:py-2 w-full">
+            <div class="w-full px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-2">
+                <div class="flex items-center gap-3 sm:gap-4 font-medium">
+                    <span class="flex items-center gap-1.5 hover:text-ptred transition"><i class="fa-solid fa-truck-fast"></i> Delivery across West Bengal</span>
+                    <span class="hidden md:inline text-slate-300">|</span>
+                    <span class="hidden md:flex items-center gap-1.5 hover:text-ptdark transition"><i class="fa-solid fa-leaf text-green-500"></i> ISO 9001:2015</span>
+                </div>
+                <div class="flex items-center gap-3 sm:gap-4 font-bold">
+                    <a href="<?php echo $base_url; ?>contact.php" class="hover:text-ptred transition hidden sm:inline-block"><i class="fa-solid fa-location-dot"></i> Find Distributors</a>
+                    <span class="hidden md:inline text-slate-300">|</span>
+                    <a href="tel:+919876543210" class="flex items-center gap-2 bg-white px-3 py-1 rounded-full shadow-sm text-slate-800 hover:text-ptred transition">
+                        <i class="fa-solid fa-phone cursor-pointer"></i> +91 98765 43210
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- 2. Main Stylish Navigation Header -->
-    <header class="bg-white shadow-md fixed top-[37px] sm:top-[34px] w-full z-40 transition-all duration-300" id="mainHeader">
-        <div class="w-full px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+        <!-- 2. Main Stylish Navigation Header -->
+        <header class="bg-white shadow-md w-full transition-all duration-300" id="mainHeader">
+            <div class="w-full px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16 sm:h-20">
                 
                 <!-- Logo Zone -->
                 <div class="flex-shrink-0 flex items-center pr-8">
@@ -86,6 +88,7 @@ $base_url = SITE_URL . '/';
                     <a href="<?php echo $base_url; ?>about.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">About Us</a>
                     <a href="<?php echo $base_url; ?>products.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">Products</a>
                     <a href="<?php echo $base_url; ?>certificates.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">Certificates</a>
+                    <a href="<?php echo $base_url; ?>team.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">Team</a>
                     
                     <!-- Dropdown for Brands -->
                     <div class="relative group">
@@ -135,15 +138,17 @@ $base_url = SITE_URL . '/';
                     </button>
                 </div>
             </div>
-        </div>
+        </header>
+    </div> <!-- End Header Wrapper -->
 
-        <!-- Mobile Navigation Menu (Hidden by default) -->
-        <div class="md:hidden hidden bg-white border-t border-slate-100 absolute w-full shadow-2xl" id="mobileMenu">
-            <div class="px-4 py-6 space-y-2 max-h-[70vh] overflow-y-auto">
-                <a href="<?php echo $base_url; ?>index.php" class="block px-4 py-3 text-base font-bold text-slate-800 bg-slate-50 rounded-xl">Home</a>
-                <a href="<?php echo $base_url; ?>about.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">About Us</a>
-                <a href="<?php echo $base_url; ?>products.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">Products</a>
-                <a href="<?php echo $base_url; ?>certificates.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">Certificates</a>
+    <!-- Mobile Navigation Menu (Hidden by default) -->
+    <div class="md:hidden hidden bg-white border-t border-slate-100 fixed top-[88px] w-full shadow-2xl z-40" id="mobileMenu">
+        <div class="px-4 py-6 space-y-2 max-h-[70vh] overflow-y-auto">
+            <a href="<?php echo $base_url; ?>index.php" class="block px-4 py-3 text-base font-bold text-slate-800 bg-slate-50 rounded-xl">Home</a>
+            <a href="<?php echo $base_url; ?>about.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">About Us</a>
+            <a href="<?php echo $base_url; ?>products.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">Products</a>
+            <a href="<?php echo $base_url; ?>certificates.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">Certificates</a>
+            <a href="<?php echo $base_url; ?>team.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">Our Team</a>
                 
                 <div class="py-2">
                     <p class="px-4 text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Our Brands</p>
