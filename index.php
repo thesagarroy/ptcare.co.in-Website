@@ -9,7 +9,7 @@ $products = $stmt->fetchAll();
 ?>
 
 <!-- Hero Slider Section -->
-<section class="h-[70vh] md:h-[80vh] min-h-[500px] w-full relative group bg-indigo-50">
+<section class="h-[55vh] md:h-[80vh] min-h-[380px] md:min-h-[500px] w-full relative group bg-indigo-50">
     <div class="swiper heroSwiper h-full w-full">
         <div class="swiper-wrapper">
             <!-- Slide 1: Bipraj -->
@@ -31,7 +31,7 @@ $products = $stmt->fetchAll();
                 <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent z-0"></div>
                 
                 <!-- Slide Text Content -->
-                <div class="text-left px-6 sm:px-12 md:px-16 max-w-7xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
+                <div class="text-left px-6 sm:px-12 md:px-16 max-w-7xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full pb-4 md:pb-0">
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#111827] tracking-tight mb-4 drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] leading-[1.1]">Natural & Pure <br/>Drinking Water</h1>
                     <p class="text-lg sm:text-xl md:text-2xl text-slate-700 mb-8 font-bold drop-shadow-sm max-w-sm sm:max-w-md">Premium hydration tailored for your everyday life.</p>
                     
