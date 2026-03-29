@@ -16,9 +16,9 @@ if ($domain === 'localhost' || $domain === '127.0.0.1') {
     // ---- HOSTINGER (PRODUCTION) DATABASE CREDENTIALS ----
     // You MUST change these values to match your Hostinger MySQL database details!
     define('DB_HOST', 'localhost'); // Usually 'localhost' on Hostinger
-    define('DB_USER', 'YOUR_HOSTINGER_DB_USERNAME'); // Change this! (e.g. u1234567_ptcare)
-    define('DB_PASS', 'YOUR_HOSTINGER_DB_PASSWORD'); // Change this!
-    define('DB_NAME', 'YOUR_HOSTINGER_DB_NAME');     // Change this! (e.g. u1234567_pthealthcare)
+    define('DB_USER', 'u476804574_thesagarroy'); // Change this! (e.g. u1234567_ptcare)
+    define('DB_PASS', '#ParichitiStudios@SGurd23Hostinger'); // Change this!
+    define('DB_NAME', 'u476804574_PTCarePHP');     // Change this! (e.g. u1234567_pthealthcare)
     
     define('SITE_URL', $protocol . '://' . $domain);
 }
