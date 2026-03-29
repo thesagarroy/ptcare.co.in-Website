@@ -27,8 +27,7 @@ $products = $stmt->fetchAll();
                     <!-- Compact text overlay - strictly inside banner bounds -->
                     <div class="absolute inset-0 flex items-center px-4">
                         <div class="max-w-[55%]">
-                            <h2 class="text-xl font-extrabold text-[#111827] leading-tight mb-1.5">Natural &amp; Pure<br/>Drinking Water</h2>
-                            <p class="text-[11px] font-bold text-slate-700 mb-3 leading-snug">Premium hydration for your everyday life.</p>
+                            <p class="text-xs font-bold text-slate-700 mb-3 leading-snug">Premium hydration for your everyday life.</p>
                             <div class="flex flex-col gap-1.5">
                                 <a href="<?php echo $base_url; ?>about.php" class="inline-flex items-center justify-center bg-[#2563ea] text-white px-4 py-1.5 rounded-full font-black text-[10px] tracking-wide shadow-md hover:bg-[#1d4ed8] transition w-fit">
                                     MORE ABOUT US
