@@ -14,7 +14,7 @@ $products = $stmt->fetchAll();
         <div class="swiper-wrapper">
             <!-- Slide 1: Bipraj -->
             <!-- MOBILE: natural image height, text overlaid on top; DESKTOP: fixed 80vh cover -->
-            <div class="swiper-slide bg-[#eef8ff] relative md:flex md:items-center md:justify-start md:overflow-hidden">
+            <div class="swiper-slide bg-[#eef8ff] relative md:flex md:items-center md:justify-start md:overflow-hidden md:h-full">
 
                 <!-- ===== MOBILE LAYOUT ===== -->
                 <!-- Just the full banner image, no text, no extra overlay -->
@@ -258,6 +258,9 @@ $products = $stmt->fetchAll();
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
                 autoHeight: true,
+                breakpoints: {
+                    768: { autoHeight: false }
+                },
                 autoplay: { delay: 5000, disableOnInteraction: false },
                 pagination: { el: '.swiper-pagination', clickable: true },
                 navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
