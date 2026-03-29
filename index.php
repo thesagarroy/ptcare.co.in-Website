@@ -17,29 +17,11 @@ $products = $stmt->fetchAll();
             <div class="swiper-slide bg-[#eef8ff] relative md:flex md:items-center md:justify-start md:overflow-hidden">
 
                 <!-- ===== MOBILE LAYOUT ===== -->
-                <!-- Image at full natural width (no cropping, no zooming) -->
+                <!-- Just the full banner image, no text, no extra overlay -->
                 <div class="relative md:hidden">
                     <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png"
-                         onerror="this.onerror=null;"
                          class="w-full h-auto block"
                          alt="Bipraj Banner">
-                    <!-- Gradient overlay for text readability on mobile -->
-                    <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent"></div>
-                    <!-- Text floated on top-left of image -->
-                    <div class="absolute inset-0 flex items-center px-5 pt-2">
-                        <div>
-                            <h1 class="text-3xl font-extrabold text-[#111827] leading-tight mb-2 drop-shadow-sm">Natural &amp; Pure<br/>Drinking Water</h1>
-                            <p class="text-sm font-bold text-slate-700 mb-4 max-w-[180px]">Premium hydration for your everyday life.</p>
-                            <div class="flex flex-col gap-2">
-                                <a href="<?php echo $base_url; ?>about.php" class="inline-flex items-center justify-center bg-[#2563ea] text-white px-6 py-2.5 rounded-full font-black text-xs tracking-wide shadow-lg hover:bg-[#1d4ed8] transition">
-                                    MORE ABOUT US
-                                </a>
-                                <a href="<?php echo $base_url; ?>contact.php" class="inline-flex items-center justify-center bg-white border border-slate-300 text-slate-800 px-6 py-2.5 rounded-full font-black text-xs tracking-wide shadow hover:bg-slate-50 transition">
-                                    CONTACT US
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- ===== DESKTOP LAYOUT ===== -->
