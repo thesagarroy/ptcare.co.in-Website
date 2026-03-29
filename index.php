@@ -13,11 +13,12 @@ $products = $stmt->fetchAll();
     <div class="swiper heroSwiper h-full w-full">
         <div class="swiper-wrapper">
             <!-- Slide 1: Bipraj -->
-            <div class="swiper-slide bg-bipraj flex items-center justify-center">
-                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content">
-                    <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6">Bipraj Drinking Water</h1>
-                    <p class="text-xl md:text-2xl text-slate-800 mb-10 font-medium">Pure Hydration for Everyday Life</p>
-                    <a href="<?php echo $base_url; ?>brands/bipraj.php" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-black hover:scale-105 transition shadow-lg">
+            <div class="swiper-slide bg-slate-900 bg-cover bg-center bg-no-repeat relative flex items-center justify-center overflow-hidden" style="background-image: url('<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png');">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/10 z-0"></div>
+                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 mt-12">
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 drop-shadow-lg">Bipraj Drinking Water</h1>
+                    <p class="text-xl md:text-2xl text-slate-100 mb-10 font-medium drop-shadow-md">Pure Hydration for Everyday Life</p>
+                    <a href="<?php echo $base_url; ?>brands/bipraj.php" class="inline-flex items-center gap-2 bg-bipraj text-slate-900 px-8 py-4 rounded-full font-black hover:bg-white hover:scale-105 transition shadow-2xl">
                         Explore Bipraj <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
