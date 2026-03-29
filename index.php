@@ -9,86 +9,72 @@ $products = $stmt->fetchAll();
 ?>
 
 <!-- Hero Slider Section -->
-<section class="w-full md:h-[80vh] md:min-h-[500px] relative group">
-    <div class="swiper heroSwiper h-full w-full">
+<section class="w-full overflow-hidden">
+    <div class="swiper heroSwiper">
         <div class="swiper-wrapper">
-            <!-- Slide 1: Bipraj -->
-            <!-- MOBILE: natural image height, text overlaid on top; DESKTOP: fixed 80vh cover -->
-            <div class="swiper-slide bg-[#eef8ff] relative md:flex md:items-center md:justify-start md:overflow-hidden md:h-full">
 
-                <!-- ===== MOBILE LAYOUT ===== -->
-                <!-- Full banner image with compact text overlay, mirroring desktop style -->
-                <div class="relative md:hidden">
+            <!-- Slide 1: Bipraj -->
+            <div class="swiper-slide">
+                <div class="relative w-full" style="aspect-ratio:16/9; min-height:180px;">
                     <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png"
-                         class="w-full h-auto block"
+                         class="absolute inset-0 w-full h-full object-cover object-center"
                          alt="Bipraj Banner">
-                    <!-- Gradient overlay for text readability -->
-                    <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/60 to-transparent pointer-events-none"></div>
-                    <!-- Compact text overlay - strictly inside banner bounds -->
-                    <div class="absolute inset-0 flex items-center px-4">
-                        <div class="max-w-[55%]">
-                            <p class="text-xs font-bold text-slate-700 mb-3 leading-snug">Premium hydration for your everyday life.</p>
-                            <div class="flex flex-col gap-1.5">
-                                <a href="<?php echo $base_url; ?>about.php" class="inline-flex items-center justify-center bg-[#2563ea] text-white px-4 py-1.5 rounded-full font-black text-[10px] tracking-wide shadow-md hover:bg-[#1d4ed8] transition w-fit">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
+                    <div class="absolute inset-0 flex items-center px-[5%]">
+                        <div class="max-w-[52%]">
+                            <h1 style="font-size:clamp(0.9rem,3.2vw,4rem);" class="font-extrabold text-[#111827] leading-tight mb-[1.5%]">Natural &amp; Pure<br>Drinking Water</h1>
+                            <p style="font-size:clamp(0.55rem,1.4vw,1.25rem);" class="font-semibold text-slate-700 mb-[2%] leading-snug">Premium hydration for your everyday life.</p>
+                            <div class="flex flex-wrap gap-[1%]">
+                                <a href="<?php echo $base_url; ?>about.php"
+                                   class="inline-flex items-center bg-[#2563ea] text-white rounded-full font-black hover:bg-[#1d4ed8] transition shadow-md whitespace-nowrap"
+                                   style="font-size:clamp(0.5rem,1.1vw,0.85rem); padding:clamp(3px,0.7vw,12px) clamp(8px,1.8vw,28px);">
                                     MORE ABOUT US
                                 </a>
-                                <a href="<?php echo $base_url; ?>contact.php" class="inline-flex items-center justify-center bg-white border border-slate-300 text-slate-800 px-4 py-1.5 rounded-full font-black text-[10px] tracking-wide shadow hover:bg-slate-50 transition w-fit">
+                                <a href="<?php echo $base_url; ?>contact.php"
+                                   class="inline-flex items-center bg-white border border-slate-300 text-slate-800 rounded-full font-black hover:bg-slate-50 transition shadow whitespace-nowrap"
+                                   style="font-size:clamp(0.5rem,1.1vw,0.85rem); padding:clamp(3px,0.7vw,12px) clamp(8px,1.8vw,28px);">
                                     CONTACT US
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- ===== DESKTOP LAYOUT ===== -->
-                <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png"
-                     class="hidden md:block absolute inset-0 w-full h-full object-cover object-center z-0"
-                     alt="Bipraj Promo Desktop">
-                <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent z-0"></div>
-                <div class="hidden md:block text-left px-12 lg:px-16 max-w-7xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
-                    <h1 class="text-5xl lg:text-7xl font-extrabold text-[#111827] tracking-tight mb-4 drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] leading-[1.1]">Natural &amp; Pure <br/>Drinking Water</h1>
-                    <p class="text-xl md:text-2xl text-slate-700 mb-8 font-bold drop-shadow-sm max-w-md">Premium hydration tailored for your everyday life.</p>
-                    <div class="flex flex-wrap items-center gap-4">
-                        <a href="<?php echo $base_url; ?>about.php" class="inline-flex items-center justify-center bg-[#2563ea] text-white px-8 py-3.5 rounded-full font-black hover:bg-[#1d4ed8] hover:scale-105 transition shadow-lg text-sm tracking-wide">
-                            MORE ABOUT US
-                        </a>
-                        <a href="<?php echo $base_url; ?>contact.php" class="inline-flex items-center justify-center bg-white border border-slate-200 text-slate-800 px-8 py-3.5 rounded-full font-black hover:bg-slate-50 hover:scale-105 transition shadow-lg text-sm tracking-wide">
-                            CONTACT US
+            <!-- Slide 2: Bislaim -->
+            <div class="swiper-slide">
+                <div class="relative w-full bg-bislaim" style="aspect-ratio:16/9; min-height:180px;">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+                        <h1 style="font-size:clamp(1rem,4vw,4.5rem);" class="font-extrabold text-white tracking-tight leading-tight mb-[1%] drop-shadow-lg">Bislaim Mineral Water</h1>
+                        <p style="font-size:clamp(0.6rem,1.8vw,1.5rem);" class="text-white/90 font-medium drop-shadow-md mb-[2%]">Refreshment You Can Trust</p>
+                        <a href="<?php echo $base_url; ?>brands/bislaim.php"
+                           class="inline-flex items-center gap-2 bg-white text-bislaim rounded-full font-black hover:bg-slate-50 hover:scale-105 transition shadow-xl whitespace-nowrap"
+                           style="font-size:clamp(0.55rem,1.2vw,1rem); padding:clamp(4px,0.8vw,14px) clamp(10px,2vw,32px);">
+                            Explore Bislaim <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            
-            <!-- Slide 2: Bislaim -->
-            <div class="swiper-slide bg-bislaim bg-cover bg-center flex items-center justify-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-0"></div>
-                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-4 md:mb-6 drop-shadow-lg leading-tight">Bislaim Mineral Water</h1>
-                    <p class="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 md:mb-10 font-medium drop-shadow-md px-2">Refreshment You Can Trust</p>
-                    <a href="<?php echo $base_url; ?>brands/bislaim.php" class="inline-flex items-center gap-2 bg-white text-bislaim px-6 py-3 md:px-8 md:py-4 rounded-full font-black hover:bg-slate-50 hover:scale-105 transition shadow-xl text-sm md:text-base">
-                        Explore Bislaim <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+
+            <!-- Slide 3: Bislini -->
+            <div class="swiper-slide">
+                <div class="relative w-full bg-gradient-to-br from-bislaim to-bipraj" style="aspect-ratio:16/9; min-height:180px;">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+                        <h1 style="font-size:clamp(1rem,4vw,4.5rem);" class="font-extrabold text-slate-900 tracking-tight leading-tight mb-[1%] drop-shadow-lg">Bislini Pure Water</h1>
+                        <p style="font-size:clamp(0.6rem,1.8vw,1.5rem);" class="text-slate-800 font-bold drop-shadow-md mb-[2%]">Clean, Safe &amp; Healthy</p>
+                        <a href="<?php echo $base_url; ?>brands/bislini.php"
+                           class="inline-flex items-center gap-2 bg-slate-900 text-white rounded-full font-black hover:bg-black hover:scale-105 transition shadow-xl whitespace-nowrap"
+                           style="font-size:clamp(0.55rem,1.2vw,1rem); padding:clamp(4px,0.8vw,14px) clamp(10px,2vw,32px);">
+                            Explore Bislini <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Slide 3: Bislini -->
-            <div class="swiper-slide bg-gradient-to-br from-bislaim to-bipraj bg-cover bg-center flex items-center justify-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-white/5 z-0"></div>
-                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight mb-4 md:mb-6 drop-shadow-lg leading-tight">Bislini Pure Water</h1>
-                    <p class="text-lg sm:text-xl md:text-2xl text-slate-800 mb-8 md:mb-10 font-bold drop-shadow-md px-2">Clean, Safe & Healthy</p>
-                    <a href="<?php echo $base_url; ?>brands/bislini.php" class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-black hover:bg-black hover:scale-105 transition shadow-xl text-sm md:text-base">
-                        Explore Bislini <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
         </div>
-        
-        <!-- Navigation Buttons -->
-        <div class="swiper-button-next hidden md:flex opacity-0 group-hover:opacity-100 transition duration-300"></div>
-        <div class="swiper-button-prev hidden md:flex opacity-0 group-hover:opacity-100 transition duration-300"></div>
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev !text-white !bg-black/30 !rounded-full !w-9 !h-9 after:!text-sm hover:!bg-black/50 transition hidden md:flex"></div>
+        <div class="swiper-button-next !text-white !bg-black/30 !rounded-full !w-9 !h-9 after:!text-sm hover:!bg-black/50 transition hidden md:flex"></div>
+        <div class="swiper-pagination !bottom-2"></div>
     </div>
 </section>
 
@@ -273,10 +259,6 @@ $products = $stmt->fetchAll();
                 loop: true,
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
-                autoHeight: true,
-                breakpoints: {
-                    768: { autoHeight: false }
-                },
                 autoplay: { delay: 5000, disableOnInteraction: false },
                 pagination: { el: '.swiper-pagination', clickable: true },
                 navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
