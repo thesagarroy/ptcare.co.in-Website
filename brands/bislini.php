@@ -1,6 +1,6 @@
 <?php
 // brands/bislini.php
-require_once __DIR__ . '/../../config/config.php';
+require_once __DIR__ . '/../config/config.php';
 $base_url = SITE_URL . '/';
 include '../includes/header.php';
 ?>

@@ -42,9 +42,9 @@ $base_url = SITE_URL . '/';
 </head>
 <body class="bg-white font-sans text-slate-800 antialiased pt-[124px]"> <!-- Padding to offset fixed headers -->
 
-    <!-- 1. Top Announcement Bar (Like Awwwards / RajServices Top Links) -->
+    <!-- 1. Top Announcement Bar -->
     <div class="bg-slate-100 border-b border-slate-200 text-slate-600 text-xs py-2 fixed top-0 w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div class="w-full px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
             <div class="flex items-center gap-4 font-medium">
                 <span class="flex items-center gap-1.5 hover:text-ptred transition"><i class="fa-solid fa-truck-fast"></i> Delivery across West Bengal</span>
                 <span class="hidden md:inline text-slate-300">|</span>
@@ -61,8 +61,8 @@ $base_url = SITE_URL . '/';
     </div>
 
     <!-- 2. Main Stylish Navigation Header -->
-    <header class="bg-white shadow-sm fixed top-[37px] sm:top-[34px] w-full z-40 transition-all duration-300" id="mainHeader">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="bg-white shadow-md fixed top-[37px] sm:top-[34px] w-full z-40 transition-all duration-300" id="mainHeader">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 
                 <!-- Logo Zone -->
@@ -80,15 +80,15 @@ $base_url = SITE_URL . '/';
                     </a>
                 </div>
 
-                <!-- Desktop Navigation Links (Center aligned like Awwwards) -->
-                <nav class="hidden md:flex flex-1 items-center justify-start space-x-1 lg:space-x-2 pl-4 border-l border-slate-100">
-                    <a href="<?php echo $base_url; ?>index.php" class="px-4 py-2 text-sm font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">Home</a>
-                    <a href="<?php echo $base_url; ?>about.php" class="px-4 py-2 text-sm font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">About Us</a>
-                    <a href="<?php echo $base_url; ?>products.php" class="px-4 py-2 text-sm font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">Products</a>
+                <!-- Desktop Navigation Links (Center aligned) -->
+                <nav class="hidden md:flex flex-1 items-center justify-center space-x-1 lg:space-x-4 border-slate-100">
+                    <a href="<?php echo $base_url; ?>index.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">Home</a>
+                    <a href="<?php echo $base_url; ?>about.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">About Us</a>
+                    <a href="<?php echo $base_url; ?>products.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">Products</a>
                     
                     <!-- Dropdown for Brands -->
                     <div class="relative group">
-                        <button class="px-4 py-2 text-sm font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition flex items-center gap-1">
+                        <button class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition flex items-center gap-1">
                             Brands <i class="fa-solid fa-chevron-down text-[10px] mt-0.5"></i>
                         </button>
                         <div class="absolute left-0 mt-0 w-48 bg-white border border-slate-100 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50 overflow-hidden">
@@ -102,7 +102,7 @@ $base_url = SITE_URL . '/';
                 </nav>
 
                 <!-- Right Side Actions (Buttons & Cart) -->
-                <div class="flex items-center gap-3 sm:gap-4">
+                <div class="flex flex-shrink-0 items-center justify-end gap-3 sm:gap-4 pl-4 border-l border-slate-100">
                     
                     <!-- Shopping Cart Icon with absolute badge -->
                     <a href="<?php echo $base_url; ?>cart.php" class="relative p-2 text-slate-600 hover:text-ptdark transition group">
