@@ -9,38 +9,40 @@ $products = $stmt->fetchAll();
 ?>
 
 <!-- Hero Slider Section -->
-<section class="h-[80vh] min-h-[500px] w-full relative group">
+<section class="h-[65vh] md:h-[80vh] min-h-[400px] md:min-h-[500px] w-full relative group">
     <div class="swiper heroSwiper h-full w-full">
         <div class="swiper-wrapper">
             <!-- Slide 1: Bipraj -->
             <div class="swiper-slide bg-slate-900 bg-cover bg-center bg-no-repeat relative flex items-center justify-center overflow-hidden" style="background-image: url('<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png');">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/10 z-0"></div>
-                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 mt-12">
-                    <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 drop-shadow-lg">Bipraj Drinking Water</h1>
-                    <p class="text-xl md:text-2xl text-slate-100 mb-10 font-medium drop-shadow-md">Pure Hydration for Everyday Life</p>
-                    <a href="<?php echo $base_url; ?>brands/bipraj.php" class="inline-flex items-center gap-2 bg-bipraj text-slate-900 px-8 py-4 rounded-full font-black hover:bg-white hover:scale-105 transition shadow-2xl">
+                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-4 md:mb-6 drop-shadow-lg leading-tight">Bipraj Drinking Water</h1>
+                    <p class="text-lg sm:text-xl md:text-2xl text-slate-100 mb-8 md:mb-10 font-medium drop-shadow-md px-2">Pure Hydration for Everyday Life</p>
+                    <a href="<?php echo $base_url; ?>brands/bipraj.php" class="inline-flex items-center gap-2 bg-bipraj text-slate-900 px-6 py-3 md:px-8 md:py-4 rounded-full font-black hover:bg-white hover:scale-105 transition shadow-2xl text-sm md:text-base">
                         Explore Bipraj <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
             
             <!-- Slide 2: Bislaim -->
-            <div class="swiper-slide bg-bislaim flex items-center justify-center">
-                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content">
-                    <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">Bislaim Mineral Water</h1>
-                    <p class="text-xl md:text-2xl text-white/90 mb-10 font-medium">Refreshment You Can Trust</p>
-                    <a href="<?php echo $base_url; ?>brands/bislaim.php" class="inline-flex items-center gap-2 bg-white text-bislaim px-8 py-4 rounded-full font-bold hover:bg-slate-50 hover:scale-105 transition shadow-lg">
+            <div class="swiper-slide bg-bislaim bg-cover bg-center flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-0"></div>
+                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-4 md:mb-6 drop-shadow-lg leading-tight">Bislaim Mineral Water</h1>
+                    <p class="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 md:mb-10 font-medium drop-shadow-md px-2">Refreshment You Can Trust</p>
+                    <a href="<?php echo $base_url; ?>brands/bislaim.php" class="inline-flex items-center gap-2 bg-white text-bislaim px-6 py-3 md:px-8 md:py-4 rounded-full font-black hover:bg-slate-50 hover:scale-105 transition shadow-xl text-sm md:text-base">
                         Explore Bislaim <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Slide 3: Bislini -->
-            <div class="swiper-slide bg-gradient-to-br from-bislaim to-bipraj flex items-center justify-center">
-                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content">
-                    <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6">Bislini Pure Water</h1>
-                    <p class="text-xl md:text-2xl text-slate-800 mb-10 font-medium">Clean, Safe & Healthy</p>
-                    <a href="<?php echo $base_url; ?>brands/bislini.php" class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-black hover:scale-105 transition shadow-lg">
+            <div class="swiper-slide bg-gradient-to-br from-bislaim to-bipraj bg-cover bg-center flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-white/5 z-0"></div>
+                <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight mb-4 md:mb-6 drop-shadow-lg leading-tight">Bislini Pure Water</h1>
+                    <p class="text-lg sm:text-xl md:text-2xl text-slate-800 mb-8 md:mb-10 font-bold drop-shadow-md px-2">Clean, Safe & Healthy</p>
+                    <a href="<?php echo $base_url; ?>brands/bislini.php" class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-black hover:bg-black hover:scale-105 transition shadow-xl text-sm md:text-base">
                         Explore Bislini <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
