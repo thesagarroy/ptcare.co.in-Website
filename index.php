@@ -9,32 +9,26 @@ $products = $stmt->fetchAll();
 ?>
 
 <!-- Hero Slider Section -->
-<section class="h-auto md:h-[80vh] w-full relative group">
+<section class="h-[70vh] md:h-[80vh] min-h-[500px] w-full relative group">
     <div class="swiper heroSwiper h-full w-full">
         <div class="swiper-wrapper">
             <!-- Slide 1: Bipraj -->
-            <div class="swiper-slide bg-[#eef8ff] relative flex flex-col sm:flex-row items-center justify-start sm:justify-center overflow-hidden h-auto md:h-full">
-                <!-- Desktop Banner Image -->
+            <div class="swiper-slide bg-slate-100 relative flex items-center justify-start overflow-hidden">
+                <!-- Banner Image (Full cover, pinned to 80% right to show bottles strictly on mobile) -->
                 <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png" 
-                     class="hidden sm:block absolute inset-0 w-full h-full object-cover object-center z-0" 
-                     alt="Bipraj Promo Desktop">
-                     
-                <!-- Mobile Banner Image (Full uncropped layout at the top) -->
-                <div class="w-full sm:hidden relative z-0 flex-shrink-0">
-                    <img src="<?php echo $base_url; ?>assets/images/banners/bipraj-banner.png" 
-                         class="w-full h-auto object-contain block" 
-                         alt="Bipraj Promo Mobile">
-                </div>
+                     class="absolute inset-0 w-full h-full object-cover object-[80%_center] md:object-center z-0" 
+                     alt="Bipraj Promo">
                 
-                <!-- Desktop Gradient Overlay -->
-                <div class="hidden sm:block absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent z-0"></div>
+                <!-- White Gradient Overlay (Ensures text readability on both devices) -->
+                <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent z-0 sm:hidden"></div>
+                <div class="hidden sm:block absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent z-0"></div>
                 
-                <!-- Slide Text Content -->
-                <div class="text-center sm:text-left px-4 sm:px-12 md:px-16 pb-12 pt-6 sm:py-0 max-w-7xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
-                    <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#111827] tracking-tight mb-3 sm:mb-4 drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] leading-[1.1]">Natural & Pure <br/>Drinking Water</h1>
-                    <p class="text-base sm:text-xl md:text-2xl text-slate-700 mb-6 sm:mb-8 font-bold drop-shadow-sm max-w-sm sm:max-w-md mx-auto sm:mx-0">Premium hydration tailored for your everyday life.</p>
+                <!-- Slide Text Content - STRICTLY LEFT ALIGNED ON ALL DEVICES -->
+                <div class="text-left px-6 sm:px-12 md:px-16 max-w-7xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#111827] tracking-tight mb-4 drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] leading-[1.1]">Natural & Pure <br/>Drinking Water</h1>
+                    <p class="text-lg sm:text-xl md:text-2xl text-slate-700 mb-8 font-bold drop-shadow-sm max-w-sm sm:max-w-md">Premium hydration tailored for your everyday life.</p>
                     
-                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4">
+                    <div class="flex flex-wrap items-center gap-4">
                         <a href="<?php echo $base_url; ?>about.php" class="inline-flex items-center justify-center bg-[#2563ea] text-white px-8 py-3.5 rounded-full font-black hover:bg-[#1d4ed8] hover:scale-105 transition shadow-lg text-sm tracking-wide">
                             MORE ABOUT US
                         </a>
@@ -46,7 +40,7 @@ $products = $stmt->fetchAll();
             </div>
             
             <!-- Slide 2: Bislaim -->
-            <div class="swiper-slide bg-bislaim bg-cover bg-center flex items-center justify-center relative overflow-hidden h-auto md:h-full py-24 md:py-0">
+            <div class="swiper-slide bg-bislaim bg-cover bg-center flex items-center justify-center relative overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-0"></div>
                 <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-4 md:mb-6 drop-shadow-lg leading-tight">Bislaim Mineral Water</h1>
@@ -58,7 +52,7 @@ $products = $stmt->fetchAll();
             </div>
 
             <!-- Slide 3: Bislini -->
-            <div class="swiper-slide bg-gradient-to-br from-bislaim to-bipraj bg-cover bg-center flex items-center justify-center relative overflow-hidden h-auto md:h-full py-24 md:py-0">
+            <div class="swiper-slide bg-gradient-to-br from-bislaim to-bipraj bg-cover bg-center flex items-center justify-center relative overflow-hidden">
                 <div class="absolute inset-0 bg-white/5 z-0"></div>
                 <div class="text-center px-4 max-w-4xl mx-auto transform transition duration-1000 translate-y-4 opacity-0 slide-content relative z-10 w-full">
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight mb-4 md:mb-6 drop-shadow-lg leading-tight">Bislini Pure Water</h1>
@@ -259,7 +253,6 @@ $products = $stmt->fetchAll();
                 loop: true,
                 effect: 'fade',
                 fadeEffect: { crossFade: true },
-                autoHeight: true,
                 autoplay: { delay: 5000, disableOnInteraction: false },
                 pagination: { el: '.swiper-pagination', clickable: true },
                 navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
