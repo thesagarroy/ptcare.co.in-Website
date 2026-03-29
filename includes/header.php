@@ -71,11 +71,10 @@ $base_url = SITE_URL . '/';
                 <div class="flex-shrink-0 flex items-center pr-4 md:pr-8">
                     <a href="<?php echo $base_url; ?>index.php" class="flex items-center gap-3 group">
                         
-                        <!-- Real Image Logo (Replace logo.png/jpg in assets/images/logo) -->
+                        <!-- Real Image Logo -->
                         <img src="<?php echo $base_url; ?>assets/images/logo/logo.png" 
                              alt="P.T. Healthcare Logo" 
-                             class="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm"
-                             onerror="this.outerHTML='<div class=\'relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-gradient-to-br from-bislaim to-blue-500 rounded-xl text-white shadow-md group-hover:shadow-lg transition\'><i class=\'fa-solid fa-droplet text-xl md:text-2xl\'></i></div>'">
+                             class="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition duration-300 drop-shadow-sm">
                         
                         <div class="hidden sm:block">
                             <span class="block text-xl font-heading font-black text-slate-900 tracking-tight leading-none group-hover:text-bislaim transition">P.T. HEALTHCARE</span>

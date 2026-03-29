@@ -12,6 +12,10 @@ define('DB_NAME', 'u476804574_PTCarePHP');
 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
 $domain = $_SERVER['HTTP_HOST'] ?? 'ptcare.co.in';
 
-define('SITE_URL', $protocol . '://' . $domain);
+if (strpos($domain, 'localhost') !== false || $domain === '127.0.0.1') {
+    define('SITE_URL', 'http://localhost/PTCARE%20WEBSITE');
+} else {
+    define('SITE_URL', $protocol . '://' . $domain);
+}
 define('SITE_NAME', 'P.T. HEALTHCARE PVT. LTD');
 ?>
