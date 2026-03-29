@@ -85,6 +85,7 @@ $base_url = SITE_URL . '/';
                     <a href="<?php echo $base_url; ?>index.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">Home</a>
                     <a href="<?php echo $base_url; ?>about.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">About Us</a>
                     <a href="<?php echo $base_url; ?>products.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">Products</a>
+                    <a href="<?php echo $base_url; ?>certificates.php" class="px-4 py-2 text-[15px] font-bold text-slate-700 hover:text-bislaim rounded-lg hover:bg-slate-50 transition">Certificates</a>
                     
                     <!-- Dropdown for Brands -->
                     <div class="relative group">
@@ -142,6 +143,7 @@ $base_url = SITE_URL . '/';
                 <a href="<?php echo $base_url; ?>index.php" class="block px-4 py-3 text-base font-bold text-slate-800 bg-slate-50 rounded-xl">Home</a>
                 <a href="<?php echo $base_url; ?>about.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">About Us</a>
                 <a href="<?php echo $base_url; ?>products.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">Products</a>
+                <a href="<?php echo $base_url; ?>certificates.php" class="block px-4 py-3 text-base font-bold text-slate-700 hover:bg-slate-50 rounded-xl">Certificates</a>
                 
                 <div class="py-2">
                     <p class="px-4 text-xs font-black text-slate-400 uppercase tracking-widest mb-2">Our Brands</p>
